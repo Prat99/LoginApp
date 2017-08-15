@@ -1,0 +1,34 @@
+
+<div id="wrapper">
+<div *ngIf='wrongCredentials' class='errorMsg'>
+  <h2>Either Username or password is wrong</h2>
+</div>
+	<form name="login-form" class="login-form">
+	
+		<div class="header">
+		<h1>Login Form</h1>
+		<span>Fill out the form below to login to my super awesome imaginary control panel.</span>
+		</div>
+	
+		<div class="content">
+		<input name="username" type="text" 
+    class="input username" 
+    placeholder="Username"
+    [(ngModel)]='loginCredentials.username'/>
+		<div class="user-icon"></div>
+		<input name="password" 
+    type="password"
+    class="input password"
+    placeholder="Password"
+    [(ngModel)]='loginCredentials.password'/>
+		<div class="pass-icon"></div>		
+		</div>
+
+		<div class="footer">
+    <button class='button' type='button' (click)='validateUser(loginCredentials)'>Login</button>
+		</div>
+	
+	</form>
+
+</div>
+<div class="gradient"></div>
